@@ -2,7 +2,6 @@ let timerDisplay = document.querySelector('.timerDisplay');
 let stopBtn = document.getElementById('stopBtn');
 let startBtn = document.getElementById('startBtn');
 let resetBtn = document.getElementById('resetBtn');
-// added one
 let lapBtn = document.getElementById('lapBtn');
 
 let msec = 00;
@@ -27,7 +26,7 @@ resetBtn.addEventListener('click', function(){
     clearInterval(timerId);
     timerDisplay.innerHTML = `00 : 00 : 00`;
     msec = secs = mins = 00;
-    // added
+    
     lapTimes = [];
     displayLapTimes();
 });
@@ -39,26 +38,6 @@ lapBtn.addEventListener('click', function(){
     }
 });
 
-
-// function startTimer(){
-//     msec++;
-//     if(msec == 100){
-//         msec = 0;
-//         secs++;
-//         if(secs == 60){
-//             secs = 0;
-// mins++;
-//         }
-//     }
-
-//     let msecString = msec < 10 ? `0${msec}` : msec;
-//     let secsString = secs < 10 ? `0${secs}` : secs;
-//     let minsString = mins < 10 ? `0${mins}` : mins;
-    
-
-//     timerDisplay.innerHTML = `${minsString} : ${secsString} : ${msecString}`;
-
-// }
 function startTimer(){
     msec++;
     if(msec == 100){
